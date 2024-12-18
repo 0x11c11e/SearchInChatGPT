@@ -12,8 +12,6 @@ function fillChatGPTInput(text) {
     const textArea = document.querySelector(
       "textarea[data-id='root'], textarea[tabindex='0']"
     )
-    const sendButton = document.querySelector("button[data-id='send-button']")
-
     if (textArea) {
       clearInterval(checkInterval)
 

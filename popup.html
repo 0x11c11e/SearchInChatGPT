@@ -1,22 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <title>Search in ChatGPT</title>
-  <link rel="stylesheet" href="popup.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <div class="container">
-    <h1>Search in ChatGPT</h1>
-    <div class="search-section">
-      <input type="text" id="searchInput" placeholder="Enter your query" />
-      <button id="searchButton">Search</button>
+    <div class="search-card">
+      <div class="header">
+        <i class="fas fa-robot robot-icon"></i>
+        <h1>ChatGPT Search</h1>
+      </div>
+
+      <div class="search-section">
+        <div class="search-input-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="searchInput" placeholder="What would you like to know?" autocomplete="off"
+            spellcheck="true" />
+        </div>
+        <button id="searchButton">
+          <span>Search</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <i class="fas fa-bolt"></i>
+          <span>Fast Results</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-shield-alt"></i>
+          <span>Secure</span>
+        </div>
+        <div class="feature">
+          <i class="fas fa-sync"></i>
+          <span>Real-time</span>
+        </div>
+      </div>
     </div>
-    <div class="footer">
-      <p>Version 1.0.0 • Made with ❤️ by SearchInChatGPT Team</p>
-    </div>
+
+    <footer class="footer">
+      <p>Version 1.0.0 • Made with <i class="fas fa-heart"></i> by Iman Reihanian</p>
+    </footer>
   </div>
   <script src="popup.js"></script>
 </body>

@@ -12,28 +12,8 @@ browser.runtime.onInstalled.addListener(() => {
   })
 })
 
-// Function to save search to history
-async function saveToHistory(text) {
-  const result = await browser.storage.local.get('searchHistory')
-  const history = result.searchHistory || []
-
-  // Add new search to the beginning of the array
-  history.unshift({
-    text: text,
-    timestamp: new Date().toISOString(),
-  })
-
-  // Keep only the last 20 searches
-  const trimmedHistory = history.slice(0, 20)
-
-  await browser.storage.local.set({ searchHistory: trimmedHistory })
-}
-
 // Function to handle searching text in ChatGPT
 async function searchInChatGPT(selectedText) {
-  // Save search to history
-  await saveToHistory(selectedText)
-
   // Construct the query URL
   const queryUrl = `https://chatgpt.com/?q=${encodeURIComponent(selectedText)}`
 
@@ -52,40 +32,11 @@ async function searchInChatGPT(selectedText) {
   }
 }
 
-// Handle keyboard command
-chrome.commands.onCommand.addListener(async (command) => {
-  if (command === 'search-in-chatgpt') {
-    // Get the active tab
-    const [activeTab] = await chrome.tabs.query({
-      active: true,
-      currentWindow: true,
-    })
-
-    // Execute script to get the selected text
-    const [{ result }] = await chrome.scripting.executeScript({
-      target: { tabId: activeTab.id },
-      function: () => window.getSelection().toString(),
-    })
-
-    if (result) {
-      await searchInChatGPT(result)
-    }
-  }
-})
-
 // Handle context menu click
-chrome.contextMenus.onClicked.addListener(async (info, tab) => {
+browser.contextMenus.onClicked.addListener(async (info) => {
   if (info.menuItemId === 'searchInChatGPT') {
     const selectedText = info.selectionText
-
     // Perform the search in ChatGPT
     await searchInChatGPT(selectedText)
-  }
-})
-
-// Listen for messages from popup
-browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === 'searchFromHistory') {
-    searchInChatGPT(request.text)
   }
 })

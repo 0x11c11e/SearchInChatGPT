@@ -3,13 +3,11 @@
   "name": "SearchInChatGPT",
   "version": "1.0.0",
   "description": "Quickly search highlighted text in ChatGPT",
-  "permissions": ["contextMenus", "tabs", "activeTab", "scripting", "storage"],
+  "permissions": ["contextMenus", "tabs", "activeTab", "scripting"],
+  "author": "Iman Reihanian",
   "host_permissions": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "{search-in-chatgpt@extension}",
-      "strict_min_version": "109.0"
-    }
+  "background": {
+    "service_worker": "background.js"
   },
   "commands": {
     "search-in-chatgpt": {
@@ -19,9 +17,6 @@
       },
       "description": "Search selected text in ChatGPT"
     }
-  },
-  "background": {
-    "service_worker": "background.js"
   },
   "content_scripts": [
     {

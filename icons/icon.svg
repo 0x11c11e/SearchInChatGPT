@@ -1,11 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-  <!-- Chat bubble -->
-  <path d="M64 8C33.072 8 8 33.072 8 64c0 30.928 25.072 56 56 56 10.368 0 20.064-2.832 28.4-7.744l23.6 7.744-7.744-23.6C113.168 84.064 116 74.368 116 64c0-30.928-25.072-56-56-56z" 
-        fill="#10a37f" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background Circle -->
+  <circle cx="64" cy="64" r="64" fill="#2D7FF9"/>
   
-  <!-- Magnifying glass -->
-  <g transform="translate(64,64) scale(0.5) translate(-64,-64)">
-    <circle cx="56" cy="56" r="24" fill="none" stroke="white" stroke-width="8"/>
-    <path d="M72 72L96 96" stroke="white" stroke-width="8" stroke-linecap="round"/>
-  </g>
+  <!-- Chat Bubble -->
+  <path d="M94 48c0-11.046-8.954-20-20-20H44c-11.046 0-20 8.954-20 20v20c0 11.046 8.954 20 20 20h4v12l12-12h14c11.046 0 20-8.954 20-20V48z" fill="white"/>
+  
+  <!-- GPT Text -->
+  <text x="64" y="68" 
+        font-family="Arial, sans-serif" 
+        font-size="24" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#2D7FF9">GPT</text>
+  
+  <!-- Search Icon -->
+  <circle cx="85" cy="85" r="16" fill="#FFD700" stroke="#2D7FF9" stroke-width="4"/>
+  <path d="M92 92l12 12" stroke="#2D7FF9" stroke-width="4" stroke-linecap="round"/>
 </svg>
