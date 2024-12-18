@@ -1,14 +1,12 @@
 # 🚀 SearchInChatGPT Extension
 
-SearchInChatGPT is a browser extension designed to enhance your workflow by enabling quick searches of highlighted text directly in ChatGPT. It integrates seamlessly with popular browsers and provides a user-friendly interface to search and manage queries efficiently.
+SearchInChatGPT is a lightweight browser extension that allows you to quickly search highlighted text directly in ChatGPT. Simplify your workflow with instant access to AI assistance from any webpage.
 
 ## ✨ Features
 
-- 🔍 **Search Highlighted Text**: Quickly search any selected text in ChatGPT using the context menu or keyboard shortcuts.
-- 🕒 **Search History**: Automatically saves your search history for future reference (up to 20 recent searches).
-- 📝 **Customizable Templates**: Add and manage search templates to customize how text is sent to ChatGPT.
-- ⌨️ **Keyboard Shortcuts**: Use `Ctrl+Shift+S` (Windows) or `Command+Shift+S` (Mac) for instant searches.
-- 💡 **Lightweight UI**: Clean and intuitive popup for managing searches and templates.
+- 🔍 **Search Highlighted Text**: Select text on any webpage, right-click, and search directly in ChatGPT.
+- ⌨️ **Keyboard Shortcuts**: Use `Ctrl+Shift+S` (Windows) or `Command+Shift+S` (Mac) to initiate a search instantly.
+- 🌟 **Simple Popup Interface**: Enter custom queries directly from the popup for personalized searches.
 
 ## ⚙️ Installation
 
@@ -29,15 +27,15 @@ SearchInChatGPT is a browser extension designed to enhance your workflow by enab
 
 1. Highlight any text on a webpage.
 2. Right-click and select **Search in ChatGPT** from the context menu.
-3. Alternatively, use the keyboard shortcut to open ChatGPT with the selected text.
-4. View your search history and manage templates from the extension popup.
+3. Use the popup to enter custom queries manually.
+4. Alternatively, use the keyboard shortcut to search instantly.
 
 ## 📂 File Overview
 
 - **manifest.json**: Defines the extension's metadata and permissions.
 - **background.js**: Handles background tasks, such as context menu creation and search logic.
 - **content.js**: Interacts with the ChatGPT interface to input and submit text.
-- **popup.html**: The user interface for managing search history and templates.
+- **popup.html**: The user interface for entering and managing search queries.
 - **popup.js**: Controls the functionality of the popup interface.
 - **styles.css**: Styles the popup UI.
 - **browser-polyfill.min.js**: Ensures compatibility with multiple browsers.
@@ -71,5 +69,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ---
 
-Made with ❤️ by the SearchInChatGPT Team.  
-**Developer**: 👨‍💻 Iman Reihanian
+Made with ❤️ by Iman Reihanian
