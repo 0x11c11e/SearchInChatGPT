@@ -3,7 +3,7 @@
   "name": "Search In ChatGPT",
   "version": "1.0.0",
   "description": "Quickly search highlighted text in ChatGPT",
-  "permissions": ["contextMenus", "tabs", "scripting"],
+  "permissions": ["contextMenus", "tabs"],
   "author": "Iman Reihanian",
   "host_permissions": ["https://chat.openai.com/*", "https://chatgpt.com/*"],
   "background": {
